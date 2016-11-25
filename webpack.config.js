@@ -13,7 +13,6 @@ module.exports = {
     },
     output: {
         filename: '[name].js',
-        publicPath: '/dist/',
         path: './dist',
     },
     module: {
