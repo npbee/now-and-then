@@ -1,9 +1,10 @@
-const VERSION = 5;
+const VERSION = 6;
 
 self.addEventListener('install', e => {
     e.waitUntil(
         caches.open('now-and-then').then(cache => {
             return cache.addAll([
+                                './',
                                 'index.html',
                                 'app.js'
             ]).then(() => self.skipWaiting());
