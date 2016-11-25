@@ -7,7 +7,7 @@ self.addEventListener('install', e => {
                                 '/index.html',
                                 '/app.js'
             ]).then(() => self.skipWaiting());
-        }).catch(console.error.bind(error))
+        }).catch(console.error.bind(console))
     );
 });
 
