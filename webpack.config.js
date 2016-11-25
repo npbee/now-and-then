@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -37,6 +38,9 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: 'Now & Then'
-        })
+        }),
+        new CopyWebpackPlugin([
+            { from: './src/sw.js', to: 'sw.js' }
+        ])
     ]
 };
