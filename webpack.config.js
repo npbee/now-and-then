@@ -37,7 +37,8 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
         }),
         new HtmlWebpackPlugin({
-            title: 'Now & Then'
+            title: 'Now & Then',
+            template: 'template.html'
         }),
         new CopyWebpackPlugin([
             { from: './src/sw.js', to: 'sw.js' }

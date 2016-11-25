@@ -2,9 +2,9 @@ self.addEventListener('install', e => {
     e.waitUntil(
         caches.open('now-and-then').then(cache => {
             return cache.addAll([
-                '/',
-                '/index.html',
-                '/dist/app.js'
+                './',
+                './index.html',
+                '/app.js'
             ]).then(() => self.skipWaiting());
         })
     );
